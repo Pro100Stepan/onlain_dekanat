@@ -1,0 +1,85 @@
+body{
+  background-color: rgba(242, 242, 242, 1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0px 0px 0px;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  height: 100px;
+  background-color: rgba(124, 160, 251, 1);
+  width: 100%;
+}
+
+.logo{
+  max-width: 50px;
+  max-height: 50px;
+}
+
+img{
+  margin: 5px 5px 5px 5px;
+  width: 90px;
+  height: 90px;
+}
+.button_exit{
+  position:absolute;
+  left: 87.5%;
+  top: 30px;
+  max-width: 100px;
+  width:100px;
+  height: 40px;
+  border-width: 1px;
+  border-style: solid;
+  background-color: rgba(252, 252, 252, 1);
+  align-self: stretch;
+  font-size: 19px;
+  cursor: pointer;
+}
+.button_exit:active{
+  background: rgba(229, 229, 229, 1);
+}
+
+.case {
+  margin: 20px 0px 0px 0px;
+  padding-top: 10px;
+  justify-content: center;
+  background-color: rgba(242, 242, 242, 1);
+}
+
+
+.button1{
+  margin-top: 20px;
+  position:relative;
+  max-width: 100%;
+  height: 45px;
+  width: 660px;
+  border-width: 1px;
+  border-style: solid;
+  background-color: rgba(252, 252, 252, 1);
+  align-self: stretch;
+  font-size: 19px;
+  cursor: pointer;
+}
+.button1:active{
+  background: rgba(229, 229, 229, 1);
+}
+.button2{
+  margin-top: 20px;
+  position:relative;
+  max-width: 100%;
+  height: 45px;
+  width: 660px;
+  border-width: 1px;
+  border-style: solid;
+  background-color: rgba(252, 252, 252, 1);
+  align-self: stretch;
+  font-size: 19px;
+  cursor: pointer;
+}
+.button2:active{
+  background: rgba(229, 229, 229, 1);
+}

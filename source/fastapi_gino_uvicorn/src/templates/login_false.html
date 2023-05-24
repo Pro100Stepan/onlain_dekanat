@@ -1,0 +1,28 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="{{ url_for('static', path='/css/login.css') }}" rel="stylesheet">
+    <title>Login</title>
+
+</head>
+<body>
+  <div class="header">
+      <div class="header-line">
+        <div class="logo">
+            <img src="{{ url_for('static', path='/photo/logo.png') }}" alt="logo">
+        </div>
+      </div>
+  </div>
+  <div class="case">
+    <form action="http://localhost:80/v1/users/login" method="post">
+      <div class="text">Войдите</div>
+      <div class="false"><img src="{{ url_for('static', path='/photo/cancel.png') }}" class="icon_cancel" alt="icon">Логин или пароль введен не верно.</div>
+      <input type="mail" name="email" placeholder="Login">
+      <input type="password" name="password" placeholder="Passwrod">
+      <button class="button1">Вход</button>
+    </form>
+  </div>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="{{ url_for('static', path='/css/main.css') }}" rel="stylesheet">
+    <title>Main</title>
+
+</head>
+<body>
+  <div class="header">
+      <div class="header-line">
+        <div class="logo">
+            <a href="http://localhost:80/v1/users/main_admin" method="get"><img src="{{ url_for('static', path='/photo/logo.png') }}" alt="logo"></a>
+        </div>
+      <a href="http://localhost:80/v1/users/login/desauth" method="get">
+        <button class="button_exit">Выход</button>
+      </a>
+      </div>
+  </div>
+  <div class="case">
+    <form action="http://localhost:80/v1/submissions/get_my_dopusk" method="get">
+      <button class="button1">Допуск</button>
+    </form>
+    <form action="http://localhost:80/v1/submissions/get_my_spravka" method="get">
+      <button class="button1">Справка</button>
+    </form>
+    <form action="http://localhost:80/v1/users/useradd" method="post">
+      <button class="button1">Создание юзера</button>
+    </form>
+  </div>
+</body>
+</html>

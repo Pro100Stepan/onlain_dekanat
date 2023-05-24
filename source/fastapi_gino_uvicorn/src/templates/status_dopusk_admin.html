@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="{{ url_for('static', path='/css/create_dopusk.css') }}" rel="stylesheet">
+    <title>Main</title>
+
+</head>
+<body>
+  <div class="header">
+      <div class="header-line">
+        <div class="logo">
+            <a href="http://localhost:80/v1/users/main" method="get"><img src="{{ url_for('static', path='/photo/logo.png') }}" alt="logo"></a>
+        </div>
+      <a href="http://localhost:80/v1/users/login/desauth" method="get">
+        <button class="button_exit">Выход</button>
+      </a>
+      </div>
+  </div>
+  <div class="case">
+    <form action="http://localhost:80/v1/users/main" method="get">
+      <button class="button1">Назад</button>
+    </form>
+    <form action="http://localhost:80/v1/submissions/get_my_dopusk" method="get">
+      <table>
+        <tr>
+          <th>ФИО</th>
+          <th>Препод</th>
+          <th>Предмет</th>
+          <th>Семестр</th>
+          <th>Статус</th>
+          <th></th>
+        </tr>
+      {% if dopusk!={} %}
+      {% for items in dopusk.values() %}
+        <tr>
+          <td>{{items.student}}</td>
+          <td>{{items.teacher}}</td>
+          <td>{{items.subject}}</td>
+          <td>{{items.semestr}}</td>
+          <td>{{items.status}}</td>
+          <td><a href="http://localhost:80/v1/submissions/viev_dopusk/{{items.id}}" method="get"><img src="{{ url_for('static', path='/photo/edit.png') }}" class="edit_logo" alt="logo_edit"></a></td>
+        </tr>
+      {% endfor %}
+      {% endif %}
+      </table>
+
+      <button class="button">Обновить</button>
+
+    </form>
+
+  </div>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="{{ url_for('static', path='/css/useradd.css') }}" rel="stylesheet">
+    <title>Main</title>
+
+</head>
+<body>
+  <div class="header">
+      <div class="header-line">
+        <div class="logo">
+            <a href="http://localhost:80/v1/users/login" method="get"><img src="{{ url_for('static', path='/photo/logo.png') }}" alt="logo"></a>
+        </div>
+      <a href="http://localhost:80/v1/users/login/desauth" method="get">
+        <button class="button_exit">Выход</button>
+      </a>
+      </div>
+  </div>
+  <div class="case">
+    <form action="http://localhost:80/v1/users/main" method="get">
+      <button class="button1">Назад</button>
+    </form>
+    <form action="http://localhost:80/v1/users/create_user" method="post">
+      <input type="text" name="login" placeholder="login">
+      <input type="text" name="email" placeholder="email">
+      <input type="text" name="phone" placeholder="phone">
+      <input type="text" name="role" placeholder="role">
+      <input type="text" name="name" placeholder="name">
+      <input type="text" name="admission_year" placeholder="admission_year">
+      <input type="text" name="course" placeholder="course">
+      <input type="text" name="direction" placeholder="direction">
+      <input type="text" name="group" placeholder="group">
+      <input type="text" name="hostel" placeholder="hostel">
+      <input type="text" name="password" placeholder="password">
+      <input type="text" name="zachetkaid" placeholder="zachetkaid">
+      <button class="button">Создать</button>
+    </form>
+
+  </div>
+</body>
+</html>

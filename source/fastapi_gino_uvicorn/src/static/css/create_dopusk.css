@@ -1,0 +1,141 @@
+body{
+  background-color: rgba(242, 242, 242, 1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0px 0px 0px;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  height: 100px;
+  background-color: rgba(124, 160, 251, 1);
+  width: 100%;
+}
+
+.logo{
+  max-width: 50px;
+  max-height: 50px;
+  cursor: pointer;
+}
+
+img{
+  margin: 5px 5px 5px 5px;
+  width: 90px;
+  height: 90px;
+}
+.button_exit{
+  position:absolute;
+  left: 87.5%;
+  top: 30px;
+  max-width: 100px;
+  width:100px;
+  height: 40px;
+  border-width: 1px;
+  border-style: solid;
+  background-color: rgba(252, 252, 252, 1);
+  align-self: stretch;
+  font-size: 19px;
+  cursor: pointer;
+}
+.button_exit:active{
+  background: rgba(229, 229, 229, 1);
+}
+.case {
+  margin: 20px 0px 0px 0px;
+  padding-top: 10px;
+  justify-content: center;
+  background-color: rgba(242, 242, 242, 1);
+}
+
+.icon_accept{
+  width: 30px;
+  height: 30px;
+}
+.button1 {
+  margin-top: 20px;
+  position:static;
+  left:130px;
+  width:100px;
+  height: 40px;
+  border-width: 1px;
+  border-style: solid;
+  background-color: rgba(124, 160, 251, 1);
+  align-self: stretch;
+  font-size: 19px;
+  cursor: pointer;
+}
+.button1:active{
+  background: rgba(97,138,217,1);
+  color:white;
+}
+input {
+  margin-top: 10px;
+  display: flex;
+  max-width: 100%;
+  height: 45px;
+  width: 660px;
+  border-width: 1px;
+  border-style: solid;
+  background-color: rgba(252, 252, 252, 1);
+  cursor: text;
+}
+
+.button {
+  margin-top: 20px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  left:130px;
+  max-width: 350px;
+  width:350px;
+  height: 45px;
+  border-width: 1px;
+  border-style: solid;
+  font-size: 19px;
+  background-color: rgba(124, 160, 251, 1);
+  align-self: stretch;
+  cursor: pointer;
+}
+.button:active{
+  background: rgba(97,138,217,1);
+  color:white;
+}
+
+.succsefull {
+  color: green;
+  text-align: center;
+  font-size: 30px;
+}
+table {
+  margin-top: 20px;
+  font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+  font-size: 14px;
+  border-collapse: collapse;
+  text-align: center;
+}
+th {
+  width: 100px;
+  background: #AFCDE7;
+  color: white;
+  padding: 10px 20px;
+  border-style: solid;
+  border-width: 0 1px 1px 0;
+  border-color: white;
+}
+td {
+  height: 30px;
+  border-style: solid;
+  border-width: 0 1px 1px 0;
+  border-color: white;
+  background: #D8E6F3;
+}
+.edit_logo{
+  display: flex;
+  margin: auto;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}

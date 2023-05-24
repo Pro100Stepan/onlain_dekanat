@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="{{ url_for('static', path='/css/create_dopusk.css') }}" rel="stylesheet">
+    <title>Main</title>
+
+</head>
+<body>
+  <div class="header">
+      <div class="header-line">
+        <div class="logo">
+            <a href="http://localhost:80/v1/users/login" method="get"><img src="{{ url_for('static', path='/photo/logo.png') }}" alt="logo"></a>
+        </div>
+      <a href="http://localhost:80/v1/users/login/desauth" method="get">
+        <button class="button_exit">Выход</button>
+      </a>
+      </div>
+  </div>
+  <div class="case">
+    <form action="http://localhost:80/v1/users/main" method="get">
+      <button class="button1">Назад</button>
+    </form>
+    <form action="http://localhost:80/v1/submissions/get_my_spravka" method="get">
+      <table>
+        <tr>
+          <th>ФИО</th>
+          <th>Место назначения</th>
+          <th>Количество</th>
+          <th>Статус</th>
+        </tr>
+      {% if spravka!={} %}
+      {% for items in spravka.values() %}
+        <tr>
+          <td>{{items.student}}</td>
+          <td>{{items.way_point}}</td>
+          <td>{{items.quantity}}</td>
+          <td>{{items.status}}</td>
+        </tr>
+      {% endfor %}
+      {% endif %}
+      </table>
+
+      <button class="button">Проверить</button>
+
+    </form>
+
+  </div>
+</body>
+</html>

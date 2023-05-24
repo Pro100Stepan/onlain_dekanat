@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="{{ url_for('static', path='/css/create_dopusk.css') }}" rel="stylesheet">
+    <title>Main</title>
+
+</head>
+<body>
+  <div class="header">
+      <div class="header-line">
+        <div class="logo">
+            <a href="http://localhost:80/v1/users/main" method="get"><img src="{{ url_for('static', path='/photo/logo.png') }}" class="logo_img" alt="logo"></a>
+        </div>
+      <a href="http://localhost:80/v1/users/login/desauth" method="get">
+        <button class="button_exit">Выход</button>
+      </a>
+      </div>
+  </div>
+  <div class="case">
+    <form action="http://localhost:80/v1/users/main" method="get">
+      <button class="button1">Назад</button>
+    </form>
+    <div class="succsefull"><img src="{{ url_for('static', path='/photo/accept.png') }}" class="icon_accept" alt="icon">Допуск создан</div>
+    <form action="http://localhost:80/v1/submissions/dopusk" method="post">
+      <input type="text" name="teacher" placeholder="ФИО преаодавателя">
+      <input type="text" name="subject" placeholder="Название предмета">
+      <input type="text" name="semestr" placeholder="Семестр">
+      <button class="button">Создать</button>
+    </form>
+  </div>
+</body>
+</html>
